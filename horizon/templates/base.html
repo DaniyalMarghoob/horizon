@@ -4,24 +4,30 @@
   <head>
     <meta content='IE=edge' http-equiv='X-UA-Compatible' />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include "horizon/_custom_meta.html" %}
-    <title>{% block title %}{% endblock %} - {% site_branding %}</title>
+    <title>FIWARE Lab Identity Manager - {% block title %}{% endblock %}</title>
     {% comment %} Load CSS sheets before Javascript  {% endcomment %}
     {% block css %}
       {% include "_stylesheets.html" %}
     {% endblock %}
     {% include "horizon/_conf.html" %}
     {% include "horizon/client_side/_script_loader.html" %}
-    {% include "horizon/_custom_head_js.html" %}
+    {% include "_custom_head_js.html" %}
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}dashboard/img/icons/favicon.ico"/>
+    <link rel="apple-touch-icon" href="{{ STATIC_URL }}dashboard/img/icons/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ STATIC_URL }}dashboard/img/icons/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ STATIC_URL }}dashboard/img/icons/apple-touch-icon-144-precomposed.png">
+
   </head>
   <body id="{% block body_id %}{% endblock %}" ng-app='hz'>
     {% block content %}
-      <div id="container">
-        <div class='topbar'>
-          {% include "_header.html" %}
-        </div>
-        <div id='main_content'>
-          {% include "horizon/_messages.html" %}
+
+     <!-- {% include "_header.html" %} -->
+
+      <div id="container" class="container-fluid wrap">
+        <div id='main_content' class="wrap">
           {% block sidebar %}
             {% include 'horizon/common/_sidebar.html' %}
           {% endblock %}
@@ -31,6 +37,7 @@
           </div>
         </div>
       </div>
+      {% include "horizon/_messages.html" %}
     {% endblock %}
     <div id="footer">
       {% block footer %}{% endblock %}
@@ -39,5 +46,7 @@
       {% include "horizon/_scripts.html" %}
     {% endblock %}
     <div id="modal_wrapper"></div>
+    <!--{% include '_footer.html' %}-->
+
   </body>
 </html>
