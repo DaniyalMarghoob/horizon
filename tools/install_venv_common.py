@@ -104,6 +104,9 @@ class InstallVenv(object):
             pass
 
     def pip_install(self, *args):
+        print("************************ BEFORE INSTALLING SIX ***********************************")
+        subprocess.call(['sudo','easy_install -U', 'six'])
+        print("************************ AFTER INSTALLING SIX ***********************************")
         self.run_command(['tools/with_venv.sh',
                          'pip', 'install', '--upgrade'] + list(args),
                          redirect_output=False)
