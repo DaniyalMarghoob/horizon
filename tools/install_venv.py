@@ -19,7 +19,7 @@
 
 import os
 import sys
-
+from __future__ import print_function
 import install_venv_common as install_venv  # noqa
 
 
