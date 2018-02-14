@@ -60,13 +60,13 @@ def main(argv):
     project = 'OpenStack'
     
     
-    printf("********************************************************************")
-    printf(root)
-    printf(venv)
-    printf(pip_requires)
-    printf(test_requires)
-    printf(py_version)
-    printf(project)
+    print("********************************************************************")
+    print(root)
+    print(venv)
+    print(pip_requires)
+    print(test_requires)
+    print(py_version)
+    print(project)
     printf("********************************************************************")
     install = install_venv.InstallVenv(root, venv, pip_requires, test_requires,
                                        py_version, project)
