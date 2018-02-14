@@ -65,6 +65,7 @@ def main(argv):
     printf(venv)
     printf(pip_requires)
     printf(test_requires)
+    printf(py_version)
     printf(project)
     printf("********************************************************************")
     install = install_venv.InstallVenv(root, venv, pip_requires, test_requires,
