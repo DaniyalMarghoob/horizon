@@ -41,7 +41,7 @@ python-saharaclient==0.7.6
 python-swiftclient==2.3.1
 python-troveclient==1.0.8
 pytz==2014.10
-#six==1.9.0
+
 XStatic==1.0.1 # MIT License
 XStatic-Angular==1.2.16.0  # MIT License
 XStatic-Angular-Cookies==1.2.1.1  # MIT License
